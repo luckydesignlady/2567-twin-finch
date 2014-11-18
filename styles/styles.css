@@ -1,0 +1,113 @@
+@charset "UTF-8";
+
+
+/*Keeps boxes within rows, even with padding*/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*This allows us to see the grid currently*/
+.grid {
+  background-color: pink;
+}
+
+
+.grid:after {
+  /* This is making the grid expand to contain the floated columns*/
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+[class*='column-'] {
+  /* This is the rule that is defining all of the properties of the columns, it selects everything with a class name that contains 'column-' */
+  float: left;
+  padding-right: 50px;
+  border:1px solid black;
+  margin:auto;
+}
+
+
+[class*='column-']:last-of-type {
+  /* This selects the last column and tells it not to add padding on the right */
+  padding-right: 0;
+}
+
+
+/*Grid Columns*/
+.column-2-3 {
+  width: 66.66%
+}
+
+.column-1-3 {
+  width: 33.33%
+}
+
+.column-1-12 {
+  width: 8.33%
+}
+
+.column-2-12 {
+  width: 16.66%
+}
+
+.column-3-12 {
+  width: 25%
+}
+
+.column-4-12 {
+  width: 33.33%
+}
+
+.column-5-12 {
+  width: 41.66%
+}
+
+.column-6-12 {
+  width: 50%
+}
+
+.column-7-12 {
+  width: 58.33%
+}
+
+.column-8-12 {
+  width: 66.66%
+}
+
+.column-9-12 {
+  width: 75%
+}
+
+.column-10-12 {
+  width: 83.33%
+}
+
+.column-11-12 {
+  width: 91.66%
+}
+
+.column-12-12 {
+  width: 100%
+}
+
+.wrapper {
+	max-width: 1480px;
+	margin: 0 auto;
+}
+
+/*Nav Formatting*/
+nav {
+	font-family:"DIN CONDENSED",sans-serif;
+	text-decoration:none;
+	text-align:center;
+	text-justify:distribute;
+}
+
+
+@media screen and (max-width: 700px) {
+.grid {background: brown;}
+/* CSS Document */
+
