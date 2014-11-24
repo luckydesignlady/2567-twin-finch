@@ -9,7 +9,7 @@
 }
 /*This allows us to see the grid currently*/
 .grid {
-  background-color: pink;
+  background-color: brown;
 }
 
 
@@ -93,19 +93,65 @@
   width: 100%
 }
 
-.wrapper {
-	max-width: 1480px;
-	margin: 0 auto;
+* {
+	font-family:"Droid Serif", serif;
+}
+
+h1,h2, h3, h4, h5, h6 {
+	font-family:"Din Condensed", "Courier New", Courier, monospace;
+	text-align:center;
 }
 
 /*Nav Formatting*/
-nav {
-	font-family:"DIN CONDENSED",sans-serif;
+
+
+nav li{
+	display:inline;
+    float: left;
+	font-family:"din condensed",sans-serif;
 	text-decoration:none;
-	text-align:center;
-	text-justify:distribute;
+	text-align:right;
+	text-justify:auto;
 }
 
+nav li a{
+    display: block;
+    width: 100px;
+}
+
+/*Image formatting*/
+
+.wrapper {
+	width:100%;
+	margin: 0 auto;
+}
+
+.logo {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width:inherit;
+   height:inherit;
+   margin-top: -250px; /* Half the height */
+   margin-left: -250px; /* Half the width */
+}
+
+/*Text block formatting--from the grounds up*/
+.about h2{
+	text-align:center;
+	font-family:"DIN CONDENSED",sans-serif;
+}
+
+
+/*formatting for product section*/
+
+.featuredcoffee p{
+	text-align:center;
+}
+
+.featuredcoffee button{
+	float:inline;
+}
 
 @media screen and (max-width: 700px) {
 .grid {background: brown;}
