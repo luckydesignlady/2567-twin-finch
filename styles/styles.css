@@ -9,7 +9,7 @@
 }
 /*This allows us to see the grid currently*/
 .grid {
-  background-color: brown;
+border:thin;
 }
 
 
@@ -25,6 +25,9 @@
   /* This is the rule that is defining all of the properties of the columns, it selects everything with a class name that contains 'column-' */
   float: left;
   padding-right: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 50px;
   border:.5px dashed black;
   margin:auto;
 }
@@ -102,9 +105,11 @@ h1,h2, h3, h4, h5, h6 {
 	text-align:center;
 }
 
+
+
 body {
     background-image:url(../images/wrapper-background.png);
-    background-color: #cccccc;
+    background-color: #BF9565;
 }
 
 /*Nav Formatting*/
@@ -113,7 +118,7 @@ header {position: fixed;
 		width: 100%;
 }
 
-nav li{
+/*nav li{
 	display:inline;
     float: left;
 	font-family:"din condensed",sans-serif;
@@ -126,6 +131,43 @@ nav li a{
     display: block;
     width: 100px;
 }
+
+nav {
+	color: #382614;
+	background-color: #382614;
+	size:auto;
+}*/
+
+<style>
+ul {
+	list-style:none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+	
+}
+
+a:link, a:visited {
+	
+    display: block;
+    width: 250px;
+    font-weight: bold;
+    color: #D0FFFF;
+    background-color: #382614;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover, a:active {
+    background-color: #5AB9BA;
+}
+</style>
 
 /*Image formatting*/
 
@@ -168,11 +210,152 @@ button{
 .packageimage {display
 	height: 300px; 
 	width:200px;
-	margin:0;
+	margin:50%;
 }
 
+h1, h2, h3, h4, h5, h6{
+	color: #5AB9BA;
+}
+
+p {
+	color: #E1C8B2;
+}
+
+/* css only show/hide
+
+ */
+
+html { background: white }
+
+
+
+figure {
+    margin: 0 0 1.3rem 0;
+    -webkit-transition: .125s linear;
+    -moz-transition: .125s linear;
+    -ms-transition: .125s linear;
+    -o-transition: .125s linear;
+    transition: .125s linear;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+
+
+body:after { clear: both }
+
+
+
+article {
+    margin-bottom: 3rem;
+    position: relative;
+    *zoom: 1;
+}
+
+article:before, article:after {
+    content: "";
+    display: table;
+}
+
+article:after { clear: both }
+
+
+
+article section:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+section {
+    -webkit-transition: .125s linear;
+    -moz-transition: .125s linear;
+    -ms-transition: .125s linear;
+    -o-transition: .125s linear;
+    transition: .125s linear;
+}
+
+input[type=checkbox] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+[for="read_more"] {
+    position: absolute;
+    bottom: -3rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: .65rem;
+    box-shadow: inset 1px 1px rgba(0, 0, 0, 0.1), inset -1px -1px rgba(0, 0, 0, 0.1);
+}
+
+[for="read_more"]:hover {
+    background: rgba(0,0,0,.5);
+    color: rgb(255,255,255);
+}
+
+[for="read_more"] span:last-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ section {
+    display: block;
+    visibility: visible;
+    width: 100%;
+}
+
+
+input[type=checkbox]:checked ~ [for="read_more"] span:first-of-type {
+    display: none;
+    visibility: hidden;
+}
+
+input[type=checkbox]:checked ~ [for="read_more"] span:last-of-type {
+    display: block;
+    visibility: visible;
+}
+
+/*Social Formatting*/
+.soc1, .soc2, .soc3, .soc4, {
+	margin:0px;
+	padding:5px;
+}
+
+.soc2 {
+	margin:0px;
+	padding:5px;
+}
+
+.soc3 {
+	margin:0px;
+	padding:5px;
+}
+
+.soc4 {
+	margin:0px;
+	padding:5px;
+}
+/*contact div styles*/
+
+.contact-subscribe {
+	margin: 20px;
+	padding: 5px;
+}
+	
+	
 @media screen and (max-width: 700px) {
-.grid {background: brown;
+.grid {background: #BF9565;
 		width:100%;}
 		
 .grid [class*='column-'] {
